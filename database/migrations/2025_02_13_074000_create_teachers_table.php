@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('hafalan');
             $table->date('tanggal_lahir');
             $table->text('alamat');
-            $table->enum('kelamin', ['L', 'P']);
+            $table->enum('kelamin', ['L ', 'P']);
             $table->string('images')->nullable();
             $table->timestamps();
         });

@@ -16,4 +16,9 @@ class EditStudent extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return url('/admin/students'); // Ganti dengan URL tujuan setelah create sukses
+    }
 }

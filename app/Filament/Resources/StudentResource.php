@@ -10,8 +10,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class StudentResource extends Resource
 {
@@ -63,15 +61,30 @@ class StudentResource extends Resource
                     ->numeric()
                     ->rules(['min:1', 'max:30']),
 
-                Forms\Components\DatePicker::make('tanggal_masuk')
-                    ->label('Tanggal Masuk'),
+                Forms\Components\Select::make('angkatan')
+                    ->label('Angkatan')
+                    ->options([
+                        1 => 'Angkatan 1',
+                        2 => 'Angkatan 2',
+                        3 => 'Angkatan 3',
+                        4 => 'Angkatan 4',
+                        5 => 'Angkatan 5',
+                        6 => 'Angkatan 6',
+                        7 => 'Angkatan 7',
+                    ])
+                    ->required(),
 
                 Forms\Components\FileUpload::make('images')
                     ->label('Dokumen Santri')
-//                    ->multiple()
+                    ->multiple() // Mengizinkan banyak file
+                    ->directory('documents/santri') // Menyimpan ke folder khusus
+                    ->preserveFilenames()
+                    ->maxFiles(10) // Maksimal 10 file
+                    ->acceptedFileTypes(['application/pdf', 'image/png', 'image/jpeg']) // Hanya menerima PDF & gambar
+                    ->downloadable()
+                    ->openable(),
             ]);
     }
-
 
 
     public static function table(Table $table): Table
@@ -102,16 +115,42 @@ class StudentResource extends Resource
 
                 Tables\Columns\TextColumn::make('hafalan')
                     ->label('Hafalan (Juz)')
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
 
 
-                Tables\Columns\TextColumn::make('tanggal_masuk')
-                    ->label('Tanggal Masuk')
+                Tables\Columns\TextColumn::make('angkatan')
+                    ->label('Angkatan')
                     ->sortable(),
 
                 Tables\Columns\TextColumn::make('images')
                     ->label('Dokumen')
-                    ->width(100),
+                    ->formatStateUsing(function ($state) {
+                        // Jika data kosong, tampilkan "Tidak ada dokumen"
+                        if (!$state) {
+                            return 'Tidak ada dokumen';
+                        }
+
+                        // Cek apakah data sudah berupa array atau masih string
+                        if (is_string($state)) {
+                            // Jika string, pecah berdasarkan koma dan hapus spasi ekstra
+                            $files = array_map('trim', explode(',', $state));
+                        } else {
+                            // Jika sudah array (misalnya setelah diperbaiki di database)
+                            $files = $state;
+                        }
+
+                        // Jika array kosong, tampilkan "Tidak ada dokumen"
+                        if (empty($files)) {
+                            return 'Tidak ada dokumen';
+                        }
+
+                        return 'Lihat Dokumen (' . count($files) . ')';
+                    })
+                    ->icon('heroicon-o-document')
+                    ->color('primary')
+                    ->url(fn ($record) => route('santri.documents', ['id' => $record->id]), true) // Menuju route yang menampilkan dokumen
+                    ->openUrlInNewTab(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('kelamin')

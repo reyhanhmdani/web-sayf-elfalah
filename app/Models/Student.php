@@ -18,8 +18,8 @@ class Student extends Model
 //    ];
     protected $guarded = [];
 
-//    protected $casts = [
-//        'images' => 'array', // Pastikan images didekode sebagai array
-//    ];
+    protected $casts = [
+        'images' => 'array', // Pastikan images didekode sebagai array
+    ];
 
 }

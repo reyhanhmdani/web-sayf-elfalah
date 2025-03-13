@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('kelamin', ['L', 'P']);
             $table->text('alamat');
             $table->string('nama_wali')->nullable();
-            $table->string('no_hp_wali')->nullable();
+            $table->string  ('no_hp_wali')->nullable();
             $table->integer('hafalan')->default(0);
             $table->date('tanggal_masuk')->nullable();
             $table->string('images')->nullable();
