@@ -80,20 +80,20 @@
 <div id="home" class="container-fluid bg-primary px-0 px-md-5 mb-5">
     <div class="row align-items-center px-3">
         <div class="col-lg-6 text-center text-lg-left">
-            <h4 class="text-white mb-4 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">Selamat Datang di</h4>
-            <h1 class="display-3 font-weight-bold text-white mb-5" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="text-white mb-4 mt-5 mt-lg-0" data-aos="fade-up" data-aos-duration="1000">Selamat Datang di</h4>
+            <h1 class="display-3 font-weight-bold text-white mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 Pondok Pesantren Sayf El Falah
             </h1>
-            <h5 class="text-white mb-2 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="300">VISI PONPES MODERN
+            <h5 class="text-white mb-2 mt-5 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">VISI PONPES MODERN
                 SELFA</h5>
-            <p class="text-white mb-4" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-white mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                 Menjadi lembaga pendidikan Islam terdepan yang mencetak
                 generasi beriman dan bertakwa kepada Allah, serta memiliki
                 karakter yang kuat dan dapat dipercaya (Al-Qowiyyul Amiin).
             </p>
         </div>
         <!-- Gambar Statis -->
-        <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="500">
+        <div class="col-lg-6 text-center" data-aos="zoom-in-up" data-aos-duration="1000">
             <img class="img-fluid hover-zoom mt-4 mb-3" src="{{ asset('assets/img/Header-Ponpes2.svg') }}"
 {{--                 alt="Pondok Pesantren" style="max-width: 100%; border-radius: 20px;">--}}
             alt="Pondok Pesantren">
@@ -111,18 +111,18 @@
         <div class="row align-items-center">
             <!-- Header "Tentang Pondok" dipindahkan ke atas gambar di mode mobile -->
             <div class="col-12 d-md-none text-center mb-3">
-                <p class="section-title px-5">
+                <p class="section-title px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <span class="px-2">Tentang Pondok</span>
                 </p>
             </div>
 
             <!-- Gambar -->
-            <div class="col-lg-5 order-2 order-md-1" data-aos="fade-right" data-aos-delay="100">
+            <div class="col-lg-5 order-2 order-md-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/falah-kolase.png') }}" alt="" />
             </div>
 
             <!-- Konten -->
-            <div class="col-lg-7 order-1 order-md-2" data-aos="fade-left" data-aos-delay="200">
+            <div class="col-lg-7 order-1 order-md-2" data-aos="fade-left" data-aos-duration="1000">
                 <h1 class="mb-4">Mencetak generasi pemimpin yang berjiwa rabbani, qurani, dan qiyadi</h1>
                 <h5>MISI PONDOK SELFA :</h5>
                 <div class="row pt-2 pb-4">
@@ -154,15 +154,15 @@
 <!-- Program Start -->
 <div id="program" class="container-fluid pt-5">
     <div class="text-center pb-2">
-        <p class="section-title px-5" data-aos="fade-up" data-aos-delay="200">
+        <p class="section-title px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <span class="px-2">Program</span>
         </p>
-        <h1 class="mb-4">Apa saja Program Pondok ?</h1>
+        <h1 class="mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Apa saja Program Pondok ?</h1>
     </div>
     <div class="container pb-5">
         <div class="row justify-content-center">
             <!-- Program 1 -->
-            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="d-flex flex-column bg-program border-top rounded mb-4 h-100 colom"
                      style="padding: 30px">
                     <i class="bi bi-book h1 font-weight-normal text-primary mb-3"></i>
@@ -176,7 +176,7 @@
                 </div>
             </div>
             <!-- Program 2 -->
-            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="d-flex flex-column bg-program border-top rounded mb-4 h-100 colom"
                      style="padding: 30px">
                     <i class="bi bi-translate h1 font-weight-normal text-primary mb-3"></i>
@@ -190,7 +190,7 @@
                 </div>
             </div>
             <!-- Program 3 -->
-            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="d-flex flex-column bg-program border-top rounded mb-4 h-100 colom"
                      style="padding: 30px">
                     <i class="bi bi-journal-text h1 font-weight-normal text-primary mb-3"></i>
@@ -204,7 +204,7 @@
                 </div>
             </div>
             <!-- Program 4 -->
-            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="d-flex flex-column bg-program border-top rounded mb-4 h-100 colom"
                      style="padding: 30px">
                     <i class="bi bi-people h1 font-weight-normal text-primary mb-3"></i>
@@ -218,7 +218,7 @@
                 </div>
             </div>
             <!-- Program 5 -->
-            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="d-flex flex-column bg-program border-top rounded mb-4 h-100 colom"
                      style="padding: 30px">
                     <i class="bi bi-cash-coin h1 font-weight-normal text-primary mb-3"></i>
@@ -232,7 +232,7 @@
                 </div>
             </div>
             <!-- Program 6 -->
-            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="d-flex flex-column bg-program border-top rounded mb-4 h-100 colom"
                      style="padding: 30px">
                     <i class="bi bi-gear h1 font-weight-normal text-primary mb-3"></i>
@@ -246,7 +246,7 @@
                 </div>
             </div>
             <!-- Program 7 -->
-            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 pb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="d-flex flex-column bg-program border-top rounded mb-4 h-100 colom"
                      style="padding: 30px">
                     <i class="bi bi-award h1 text-primary mb-3"></i> <!-- Ganti ikon ke "award" -->
@@ -276,14 +276,14 @@
 <div id="blog" class="container-fluid pt-5">
     <div class="container">
         <div class="text-center pb-4">
-            <p class="section-title px-5">
+            <p class="section-title px-5" data-aos="fade-up" data-aos-duration="1000">
                 <span class="px-2 text-uppercase text-primary fw-bold">Latest Blog</span>
             </p>
-            <h1 class="mb-4 fw-bold">Latest Articles From Blog</h1>
+            <h1 class="mb-4 fw-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Latest Articles From Blog</h1>
         </div>
         <div class="row pb-3 justify-content-center">
             @foreach($blogs as $blog)
-                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                     <div class="card border-0 shadow-lg mb-4 rounded-lg overflow-hidden blog-card">
                         <div class="position-relative">
                             <img class="card-img-top" src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}">
@@ -408,7 +408,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({
-        once: true
+        // once: true
     }); // Inisialisasi AOS
 </script>
 

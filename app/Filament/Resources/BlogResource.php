@@ -17,13 +17,13 @@ class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
 
     protected static ?string $navigationGroup = 'Content';
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    protected static ?string $navigationLabel = 'Blog Pondok`';
+    protected static ?string $navigationLabel = 'Blog Pondok';
 
 
     public static function form(Form $form): Form
@@ -36,7 +36,8 @@ class BlogResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required(),
-                Forms\Components\Textarea::make('content')
+                Forms\Components\RichEditor::make('content')
+                    ->toolbarButtons(['bold', 'italic', 'underline', 'undo', 'redo', 'orderedList'])
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('instagram_link')

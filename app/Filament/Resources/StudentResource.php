@@ -15,7 +15,7 @@ class StudentResource extends Resource
 {
     protected static ?string $model = Student::class;
 
-    protected static ?string $navigationIcon = 'heroicon-s-users';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
 
     // ⬇ Tambahkan navigation group
     protected static ?string $navigationGroup = 'Database Member';
